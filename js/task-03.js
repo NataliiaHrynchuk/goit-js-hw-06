@@ -14,11 +14,10 @@ const images = [
 ];
 const gallery = document.querySelector('.gallery');
 
-
-
 const markup = images.map((image) => 
-  `<li class="li-item"><img class="image" src = ${image.url} alt
+  `<li class="li-item" ><img class="image" src = ${image.url} alt
  = ${image.alt}/></li>`).join("");
 
-
 gallery.insertAdjacentHTML("afterbegin", markup);
+
+gallery.style.listStyle = "none";
