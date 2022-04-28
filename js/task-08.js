@@ -6,10 +6,8 @@ const refs = {
 }
 
 let formObject = {};
-console.log(refs.inputEmail);
-console.log(refs.inputPassword);
-console.log(refs.submit);
-refs.form.addEventListener("submit", handleSubmit);
+
+    refs.form.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
     event.preventDefault();
     const {
@@ -18,11 +16,12 @@ function handleSubmit(event) {
     
     formObject.email = email.value;
     formObject.password = password.value;
-    console.log(`Email: ${ formObject.email }, Password: ${formObject.password}`);
-   
-
+    
     if (email.value === "" || password.value === "") {
         alert("Всі поля мають бути заповнені!");
+    } else {
+        console.log(`Email: ${formObject.email}, 
+        Password: ${formObject.password}`);
     }
 
      event.currentTarget.reset();
